@@ -13,6 +13,10 @@ public class ProductDTO {
 	private Boolean outOfStock;
 	private Integer quantity;
 	
+	public ProductDTO() {
+		super();
+	}
+
 	public ProductDTO(itemData product) {
 		this.productId = product.getProductId();
 		this.name = product.getName();

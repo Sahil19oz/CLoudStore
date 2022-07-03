@@ -7,6 +7,9 @@ public class StoreDTO {
 	private String storeName;
 	private AddressDTO address;
 	
+	public StoreDTO() {
+		super();
+	}
 	public StoreDTO(Store store) {
 		this.storeId = store.getStoreId();
 		this.storeName = store.getStoreName();

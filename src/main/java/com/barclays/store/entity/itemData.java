@@ -22,17 +22,26 @@ public class itemData {
 	
 	private Integer mrp;
 	
+	@Column(name = "DISCOUNT_PERCENT")
 	private Integer discountPercent;
 	
+	@Column(name = "AVAILABLE_QUANTITY")
 	private Integer availableQuantity;
 	
+	@Column(name = "DISCOUNTED_SELLING_PRICE")
 	private Integer discountedSellingPrice;
 	
+	@Column(name = "WEIGHTS_IN_GMS")
 	private Double weightInGms;
 	
+	@Column(name = "OUT_OF_STOCK")
 	private Boolean outOfStock;
 	
 	private Integer quantity;
+
+	public itemData() {
+		super();
+	}
 
 	public itemData(ProductDTO product) {
 		this.name = product.getName();

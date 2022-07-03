@@ -28,10 +28,10 @@ public class CustomerServiceImpl implements CustomerService{
 	public String registerNewCustomer(CustomerDTO customerDTO) throws Exception {
 		Logger.info("Registering new user with email "+ customerDTO.getEmailId());
 		boolean ifUserExist = customerRepo.existsByEmailId(customerDTO.getEmailId());
-		if(ifUserExist) return env.getProperty("CustomerService.EMAIL_ID_ALREADY_IN_USE");
+		if(ifUserExist) return "CustomerService.EMAIL_ID_ALREADY_IN_USE";
 		Customer customer = Customer.getModel(customerDTO);
 		customerRepo.save(customer);
-		return env.getProperty("CustomerService.USER_REGISTERED");
+		return "CustomerService.USER_REGISTERED";
 	}
 	
 	@Override
@@ -43,8 +43,8 @@ public class CustomerServiceImpl implements CustomerService{
 			return null;
 		}
 		customer = customerRepo.findByEmailId(emailId.toLowerCase());
-		String hashedPassword = HashingUtility.getHashValue(password);
-		
+		//String hashedPassword = HashingUtility.getHashValue(password);
+		String hashedPassword = customer.getPassword();
 		if(hashedPassword.equals(password)){
 			
 				customer  = customerRepo.findByEmailId(emailId);

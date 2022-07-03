@@ -9,6 +9,9 @@ public class CartDTO {
 	private Integer quantity;
 	private String customerEmailId;
 	
+	public CartDTO() {
+		super();
+	}
 	public CartDTO(CustomerCart cart) {
 		this.cartId = cart.getCartId();
 		this.product = new ProductDTO(cart.getProduct());

@@ -13,6 +13,9 @@ public class AddressDTO {
 	private String pin;
 	private GeoLocation geoLocation;
 	
+	public AddressDTO() {
+		super();
+	}
 	public AddressDTO(Address add) {
 		this.addressId = add.getAddressId();
 		this.addressLine1 = add.getAddressLine1();

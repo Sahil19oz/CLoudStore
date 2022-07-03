@@ -16,6 +16,10 @@ public class CustomerDTO {
 	private List<AddressDTO> addresses;
 	private List<CartDTO> customerCarts;
 
+	public CustomerDTO() {
+		super();
+	}
+
 	public CustomerDTO(Customer customer) {
 		this.emailId = customer.getEmailId();
 		this.name = customer.getName();

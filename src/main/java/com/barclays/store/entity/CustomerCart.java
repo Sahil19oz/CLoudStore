@@ -21,6 +21,9 @@ public class CustomerCart {
 	private Integer quantity;
 	private String customerEmailId;
 	
+	public CustomerCart() {
+		super();
+	}
 	public CustomerCart(CartDTO cart) {
 		this.cartId = cart.getCartId();
 		this.product = new itemData(cart.getProduct());

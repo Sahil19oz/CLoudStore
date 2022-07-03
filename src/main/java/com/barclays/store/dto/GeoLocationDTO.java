@@ -7,6 +7,9 @@ public class GeoLocationDTO {
 	private Double latitude;
 	private Double longitude;
 	
+	public GeoLocationDTO() {
+		super();
+	}
 	public GeoLocationDTO(GeoLocation geoLocation) {
 		this.locId = geoLocation.getLocId();
 		this.latitude = geoLocation.getLatitude();

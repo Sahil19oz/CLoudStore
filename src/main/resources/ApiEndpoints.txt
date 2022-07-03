@@ -1,0 +1,70 @@
+1. SIGNING API endpoint
+http://127.0.0.1:3333/customer-api/sign-up
+{
+    "emailId" :"sahilagarwal891@abc.com",
+    "name":"Sahil Agarwal",
+    "password":"abc@123",
+    "phoneNumber":"9878989000",
+    "GeoLocation" :{
+        "latitude":17.232,
+        "longitude":72.627
+    },
+    "addresses":null,
+    "customerCarts":null
+}
+
+2. Logging In API Endpoint
+http://127.0.0.1:3333/customer-api/login
+{
+    "emailId" :"sahilagarwal891@abc.com",
+    "name":null,
+    "password":"abc@123",
+    "phoneNumber":null,
+    "GeoLocation" :{
+        "latitude":17.232,
+        "longitude":72.627
+    },
+    "addresses":null,
+    "customerCarts":null
+}
+
+3. Fetch all stores in the vicinity API Endpoint
+http://127.0.0.1:3333/store-api/getstores
+
+4. Fetch K closest store to current location API Endpoint
+http://127.0.0.1:3333/store-api/getnearestStore/1
+{
+    "emailId" :"sahilagarwal891@abc.com",
+    "name":null,
+    "password":"abc@123",
+    "phoneNumber":null,
+    "GeoLocation" :{
+        "latitude":12.9255,
+        "longitude":77.627
+    },
+    "addresses":null,
+    "customerCarts":null
+}
+
+5. API Endpoint to fetch all products
+http://127.0.0.1:3333/product-api/getproducts
+
+6. API Endpoint to find product by item
+http://127.0.0.1:3333/product-api/findproduct/Ginger
+
+7. API Endpoint to add products to cart
+http://127.0.0.1:3333/cart-api/addProductToCart/sahilagarwal891@abc.com
+{
+"product":5001,
+"quantity":1
+}
+
+8. API Endpoint to delete products to cart
+http://127.0.0.1:3333/cart-api/deleteProductFromCart/sahilagarwal891@abc.com
+{
+"cart_id":1
+}
+
+
+
+
